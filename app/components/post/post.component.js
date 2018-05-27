@@ -1,8 +1,11 @@
 angular
     .module('angularWebpack')
-    .controller('PostController', PostController);
+    .component('post', {
+        template: require('./post.component.html'),
+        controller: postController
+    });
 
-function PostController() {
+function postController() {
     var vm = this;
 
     vm.post = {

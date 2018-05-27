@@ -1,8 +1,11 @@
 angular
     .module('angularWebpack')
-    .controller('CommentController', CommentController);
+    .component('comment', {
+        template: require('./comment.component.html'),
+        controller: commentController
+    });
 
-function CommentController() {
+function commentController() {
     var vm = this;
 
     vm.comment = {
